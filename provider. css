@@ -1,0 +1,198 @@
+/* style.css ke upar extra styling: Become a Provider page */
+
+.hidden {
+    display: none !important;
+}
+
+.nav-links a.active-link {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.page-header {
+    padding: 56px 6% 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #eaf1ff 0%, #f8fbff 100%);
+}
+
+.page-header h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #6b7280;
+}
+
+
+/* BENEFITS */
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 960px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.benefit {
+    padding: 24px 18px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-icon {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.benefit h3 {
+    margin-bottom: 4px;
+}
+
+.benefit p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+
+/* FORM */
+
+.provider-section {
+    max-width: 760px;
+    margin: 40px auto 70px;
+    padding: 0 20px;
+}
+
+.form-card {
+    padding: 32px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+    margin-bottom: 4px;
+}
+
+.form-sub {
+    margin-bottom: 20px;
+    color: #6b7280;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.field {
+    margin-bottom: 16px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.field textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-error {
+    min-height: 20px;
+    margin-bottom: 8px;
+    color: #dc2626;
+    font-size: 14px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* SUCCESS */
+
+.success {
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.success p {
+    margin: 8px 0 22px;
+    color: #6b7280;
+}
+
+.primary-link {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.primary-link:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 640px) {
+    .row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-card {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ServiceHub</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <main class="auth-wrapper">
+
+        <!-- LEFT: BRAND PANEL -->
+        <section class="brand-panel">
+            <div class="brand-logo">Service<span>Hub</span></div>
+
+            <h1>Trusted local services, <br>ek click door.</h1>
+
+            <p>
+                Electrician, plumber, tutor aur bohot kuch &mdash;
+                verified professionals ko apne ghar ya office ke liye book karein.
+            </p>
+
+            <ul class="brand-points">
+                <li>✅ Verified service providers</li>
+                <li>⭐ Real ratings &amp; reviews</li>
+                <li>📅 Easy online booking</li>
+            </ul>
+        </section>
+
+
+        <!-- RIGHT: FORM PANEL -->
+        <section class="form-panel">
+
+            <div class="auth-card">
+
+                <div class="tabs">
+                    <button type="button" class="tab active" id="tabLogin" onclick="showTab('login')">Login</button>
+                    <button type="button" class="tab" id="tabSignup" onclick="showTab('signup')">Sign Up</button>
+                </div>
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm" class="auth-form" novalidate>
+
+                    <h2>Welcome back 👋</h2>
+                    <p class="form-sub">Apne account me login karein.</p>
+
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email">
+
+                    <label for="loginPassword">Password</label>
+                    <div class="password-field">
+                        <input type="password" id="loginPassword" placeholder="Your password" autocomplete="current-password">
+                        <button type="button" class="eye" onclick="togglePassword('loginPassword', this)">Show</button>
+                    </div>
+
+                    <p class="form-error" id="loginError"></p>
+
+                    <button type="submit" class="primary-btn">Login</button>
+
+                    <p class="switch-text">
+                        Account nahi hai?
+                        <a href="#" onclick="showTab('signup'); return false;">Sign up karein</a>
+                    </p>
+
+                </form>
+
+
+                <!-- SIGNUP FORM -->
+                <form id="signupForm" class="auth-form hidden" novalidate>
+
+                    <h2>Account banayein</h2>
+                    <p class="form-sub">Sirf ek minute lagega.</p>
+
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" placeholder="Zayan Ahmed" autocomplete="name">
+
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email">
+
+                    <label for="signupPassword">Password</label>
+                    <div class="password-field">
+                        <input type="password" id="signupPassword" placeholder="Kam az kam 6 characters" autocomplete="new-password">
+                        <button type="button" class="eye" onclick="togglePassword('signupPassword', this)">Show</button>
+                    </div>
+
+                    <label for="signupConfirm">Confirm Password</label>
+                    <input type="password" id="signupConfirm" placeholder="Password dobara likhein" autocomplete="new-password">
+
+                    <p class="form-error" id="signupError"></p>
+
+                    <button type="submit" class="primary-btn">Create Account</button>
+
+                    <p class="switch-text">
+                        Pehle se account hai?
+                        <a href="#" onclick="showTab('login'); return false;">Login karein</a>
+                    </p>
+
+                </form>
+
+                <div class="divider"><span>ya</span></div>
+
+                <button type="button" class="guest-btn" onclick="continueAsGuest()">
+                    Guest ke tor par continue karein
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>
